@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <title>Disaster Alert!!</title>
+    <!-- bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!-- OWN CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive-style.css">
+</head>
+
+<body>
+    <!-- header design -->
+    <header>
+        <nav class="navbar navbar-expand-lg navigation-wrap" style="background-color: rgb(203, 199, 199); ">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="image/logo/Disaster.png"
+                        style="height: 55px;width: 55px; border-radius: 9px; "></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-stream navbar-toggler-icon"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">Our Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#story">NDRF Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#explore-food">TechLions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#testimonial">Reviews</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#faq">FAQ</a>
+                        </li>
+                        
+                        <li><input type="abs" placeholder="Enter your location"
+                                style="border-radius: 14px; text-align: center;height: 40px;">&nbsp;&nbsp;</li>
+                        <!-- <li class="nav-item"> -->
+                </div class="location">
+                <span> Your location</span>
+
+                <button onclick="getLocation()"
+                    style="background-color: rgb(124, 124, 227);color: aliceblue; height: 30px;width: 70px; border-radius: 18px;margin-bottom: 4px; margin-left: 12px;">GO</button>
+
+                <p id="demo"></p>
+
+                <script>
+                    var x = document.getElementById("demo");
+
+                    function getLocation() {
+                        if (navigator.geolocation) {
+                            navigator.geolocation.getCurrentPosition(showPosition);
+                        } else {
+                            x.innerHTML = "Geolocation is not supported by this browser.";
+                        }
+                    }
+
+                    function showPosition(position) {
+                        x.innerHTML = "Latitude: " + position.coords.latitude +
+                            "<br>Longitude: " + position.coords.longitude;
+                    }
+                </script>
+            </div>
+            </li>
+            </ul>
+            </div>
+        </nav>
+
+    </header>
+
+
+
+    <!-- section-1 top-banner -->
+    <section id="home">
+        <div class="abc">
+            <div class="container-fluid px-0 top-banner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-6">
+                            <h1 style="font-size: 5rem; color: azure;">Disaster Alert Warning System</h1>
+                            <p style="font-size: 33px; color: aqua;">...be alert before it happen</p>
+                            <div class="mt-4">
+                                <a href="https://ndma.gov.in" target="_blank">
+                                    <button class="main-btn">More info <i
+                                            class="fas fa-shopping-basket ps-3"></i></button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </section>
+
+
+    <!-- section-2 counter -->
+    <section id="counter">
+        <section class="counter-section">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-3 mb-lg-0 mb-md-0 mb-5">
+                        <h2>
+                            <span id="count1"></span>+
+                        </h2>
+                        <p>DEATHS</p>
+                    </div>
+                    <div class="col-md-3 mb-lg-0 mb-md-0 mb-5">
+                        <h2>
+                            <span id="count2"></span>+
+                        </h2>
+                        <p>INJURY></p>
+                    </div>
+                    <div class="col-md-3 mb-lg-0 mb-md-0 mb-5">
+                        <h2>
+                            <span id="count3"></span>+
+                        </h2>
+                        <p>ECONOMIC LOSSES(Cr.)</p>
+                    </div>
+                    <div class="col-md-3 mb-lg-0 mb-md-0 mb-5">
+                        <h2>
+                            <span id="count4"></span>+
+                        </h2>
+                        <p>RECOVERY</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- section-3 about-->
+    <section id="about">
+        <div class="about-section wrapper">
+            <hr>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-7 col-md-12 mb-lg-0 mb-5">
+                        <div class="card border-0">
+                            <video autoplay muted loop width="700px" height="700px" controls="controls" />
+                            <source src="image/earthquake.mp4" type="video/mp4" class="img-fluid"></video>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-12 text-sec">
+                        <h2>"Whenever An Earthquake Takes Thousand of Innocent Lives ,shocked World Talks of little
+                            else"</h2>
+                            <ul type="circle">
+                                <li>It will find nearby open area where you will be safe</li>
+                                <li>It will provide you the contacts of "NDRF HEADQUATERS" - :- 011-2436320</li>
+                                <li>It will make sure the life of your dear one's be safe By providing the contacts of
+                                    nearby <h5> blood banks:-</h5>
+                                    <ul type="disc">
+                                        <h3>
+    
+                                            <li>011-26825707</li>
+                                            <li>011-26925858</li>
+                                            <li>011-26925801</li>
+                                        </h3>
+                                    </ul>
+                                    <ul type="disc">
+                                        <h5>
+                                            AMBULANCE:-
+                                        </h5>
+                                        <h3>
+    
+                                            <li>011-25750000</li>
+                                            <li>011-25757575</li>
+                                        </h3>
+                                    </ul>
+                                </li>
+    
+                            </ul>
+                        <a href="https://seismo.gov.in/" target="_blank">
+                            <button class="main-btn mt-4">More stats</button>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-7 col-md-12 mb-lg-0 mb-5">
+                        <div class="card border-0">
+                            <video autoplay muted loop width="700px" height="700px" controls="controls" />
+                            <source src="image/img/tsunami1.mp4" type="video/mp4" class="img-fluid"></video>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-12 text-sec">
+                        <h2>"Tsunami are always big news around hilo,grew up always getting ready to escape a Tsunami"
+                        </h2>
+                        <ul type="circle">
+                            <li>It will find nearby open area where you will be safe</li>
+                            <li>It will provide you the contacts of "NDRF HEADQUATERS" - :- 011-2436320</li>
+                            <li>It will make sure the life of your dear one's be safe By providing the contacts of
+                                nearby <h5> blood banks:-</h5>
+                                <ul type="disc">
+                                    <h3>
+
+                                        <li>011-26825707</li>
+                                        <li>011-26925858</li>
+                                        <li>011-26925801</li>
+                                    </h3>
+                                </ul>
+                                <ul type="disc">
+                                    <h5>
+                                        AMBULANCE:-
+                                    </h5>
+                                    <h3>
+
+                                        <li>011-25750000</li>
+                                        <li>011-25757575</li>
+                                    </h3>
+                                </ul>
+                            </li>
+
+                        </ul>
+                        <a href="https://tsunami.incois.gov.in/TEWS/" target="_blank">
+                            <button class="main-btn mt-4">More stats</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-7 col-md-12 mb-lg-0 mb-5">
+                        <div class="card border-0">
+                            <video autoplay muted loop width="700px" height="700px" controls="controls" />
+                            <source src="image/img/flood1.mp4" type="video/mp4" class="img-fluid"></video>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-12 text-sec">
+                        <h2>"When the flood submerges the hole country , no raindrop may feel responsible.("Finally
+                            things had lost their weightiness")</h2>
+                        <ul type="circle">
+                            <li>It will find nearby open area where you will be safe</li>
+                            <li>It will provide you the contacts of "NDRF HEADQUATERS" - :- 011-2436320</li>
+                            <li>It will make sure the life of your dear one's be safe By providing the contacts of
+                                nearby <h5> blood banks:-</h5>
+                                <ul type="disc">
+                                    <h3>
+
+                                        <li>011-26825707</li>
+                                        <li>011-26925858</li>
+                                        <li>011-26925801</li>
+                                    </h3>
+                                </ul>
+                                <ul type="disc">
+                                    <h5>
+                                        AMBULANCE:-
+                                    </h5>
+                                    <h3>
+
+                                        <li>011-25750000</li>
+                                        <li>011-25757575</li>
+                                    </h3>
+                                </ul>
+                            </li>
+
+                        </ul>
+                        <a href="https://ffs.india-water.gov.in" target="_blank">
+                            <button class="main-btn mt-4">More stats</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-7 col-md-12 mb-lg-0 mb-5">
+                        <div class="card border-0">
+                            <video autoplay muted loop width="700px" height="700px" controls="controls" />
+                            <source src="image/img/landslide1.mp4" type="video/mp4" class="img-fluid"></video>
+
+
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-12 text-sec">
+                        <h2>"Whenever the movement of a mass of rock, debris, or earth down a slope, our Heartbeat increases a lot"</h2>
+                        <ul type="circle">
+                            <li>It will find nearby open area where you will be safe</li>
+                            <li>It will provide you the contacts of "NDRF HEADQUATERS" - :- 011-2436320</li>
+                            <li>It will make sure the life of your dear one's be safe By providing the contacts of
+                                nearby <h5> blood banks:-</h5>
+                                <ul type="circle">
+                                    <li>It will find nearby open area where you will be safe</li>
+                                    <li>It will provide you the contacts of "NDRF HEADQUATERS" - :- 011-2436320</li>
+                                    <li>It will make sure the life of your dear one's be safe By providing the contacts of
+                                        nearby <h5> blood banks:-</h5>
+                                        <ul type="disc">
+                                            <h3>
+        
+                                                <li>011-26825707</li>
+                                                <li>011-26925858</li>
+                                                <li>011-26925801</li>
+                                            </h3>
+                                        </ul>
+                                        <ul type="disc">
+                                            <h5>
+                                                AMBULANCE:-
+                                            </h5>
+                                            <h3>
+        
+                                                <li>011-25750000</li>
+                                                <li>011-25757575</li>
+                                            </h3>
+                                        </ul>
+                                    </li>
+        
+                                </ul>
+                            </li>
+
+                        </ul>
+                        <a href="https://bmtpc.org" target="_blank">
+                            <button class="main-btn mt-4">More stats</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+
+    <!-- section-3 story-->
+    <section id="story" class="network">
+        <div class="story-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="text-content">
+                            <p id="differ"><strong>Green Channel Network</strong></p>
+                            <h3 id="green">Green channel will provide you the shortest path to your exact location
+                                by clearing the traffic on the roads </h3>
+                            <a href="https://dgqadefence.gov.in/green-channel-policy" target="_blank">
+                                <button class="main-btn mt-4">More info</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+
+    <section id="transport" class="Rich">
+        <div class="story-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="text-content">
+                            <p id="differ"><strong>आपदा सेवा सदैव सर्वत्र</strong></p>
+                            <h3 id="readme">When Disaster arrives, it doesn't Differentiate between Rich and Poor as
+                                like as our NDRF Team</h3>
+                            <a href="https://ndrf.gov.in/news-clippings" target="_blank">
+                                <button class="main-btn mt-4">NDRF Acheivements</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section id="contact">
+        <h1 class="h-primary center">Register Yourself</h1>
+        
+        <div id="contact-box">
+            <form action="">
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email: </label>
+                    <input type="email" name="name" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number: </label>
+                    <input type="phone" name="name" id="phone" placeholder="Enter your phone">
+                </div>
+                <button id="btn1">Register</button>
+            </form>
+            
+        </div>
+    </section>
+    <!-- section-4 explore food -->
+    <section id="explore-food">
+        <div class="explore-food wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="text-content text-center">
+                            <h2>Explore TechLions</h2>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt-5">
+                    <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+                        <div class="card">
+                            <img src="image/Ujjwal.jpg" class="img-fluid" style="height: 280px; width: 200px;">
+                            <div class="pt-3">
+                                <h4>Ujjwal Chourasia, B.Tech 5th CSE</h4>
+                                <h4>RCET Raipur, Chhattisgarh</h4>
+                                <p>Expertise in :-</p>
+                                <p>Web Devlopment</p>
+                                <p>Java</p>
+                                <p>AI & ML</p>
+
+                                <button class="mt-4 main-btn">more info</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+                        <div class="card">
+                            <img src="image/Ranvijay.jpg" class="img-fluid" style="height: 280px; width: 200px;">
+                            <div class="pt-3">
+                                <h4>Ranvijay Bharti, B.Tech 5th CSE</h4>
+                                <h4>RCET Raipur, Chhattisgarh</h4>
+                                <p>Expertise in :-</p>
+                                <p>Web Devlopment</p>
+                                <p>Java</p>
+                                <p>MySQL</p>
+                                <button class="mt-4 main-btn">more info</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+                        <div class="card">
+                            <img src="image/Mayur.jpg" class="img-fluid" style="height: 280px; width: 200px;">
+                            <div class="pt-3">
+                                <h4>Mayur Sarkar, B.Tech 5th CSE</h4>
+                                <h4>RCET Raipur, Chhattisgarh</h4>
+                                <p>Expertise in :-</p>
+                                <p>Web Devlopment</p>
+                                <p>C++</p>
+                                <p>Machine Learning</p>
+                                <button class="mt-4 main-btn">more info</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section-5 testimonial-->
+    <section id="testimonial">
+        <div class="wrapper testimonial-section">
+            <div class="container text-center">
+                <div class="text-center pb-4">
+                    <h2>Testimonial</h2>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-lg-10 offset-lg-1">
+                        <div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"
+                                    aria-label="Slide 4"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="carousel-caption">
+                                        <img src="image/review/r1.jpg">
+                                        <p> "Disaster Alert!!" helps me a lot when im on a vacation in the Florida Beach
+                                            It suddenly sends me notification that a Tsunami is going
+                                            to strike the Beach of Florida, Thankyou Disaster Alert!!.
+                                        </p>
+                                        <h5>Aryan Khan - Mumbai,Maharashtra</h5>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="carousel-caption">
+                                        <img src="image/review/r3.jpg">
+                                        <p>"I'm using this site from the last Three years and it alwways gives me
+                                            accurate result"</p>
+                                        <h5>Maccy Doe - Washingtone State</h5>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="carousel-caption">
+                                        <img src="image/review/r4.jpg">
+                                        <p>"Far far away from my home , it will assure my safety
+                                            Thankyou for your Services "</p>
+                                        <h5>Johnthan Doe - Sydney, Australia</h5>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="carousel-caption">
+                                        <img src="image/review/r2.jpg">
+                                        <p>"Thankyou Disaster Alert!!, it gives me a second life to live"</p>
+                                        <h5>Mark Smith - Wales, U.K.</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section-6 faq-->
+    <section id="faq">
+        <div class="faq wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="text-center pb-4">
+                            <h2>Frequently Asked Questions</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt-5">
+                    <div class="col-sm-6 mb-4">
+                        <h4><span>~</span>Is this website provide Financial Support?</h4>
+                        <p> No , but it will assure that you will get hospitality at minimal cost
+                            or sometimes free in severe conditions by providing contcats of nearby govt. hospitals. 
+                        </p>
+                    </div>
+                    <div class="col-sm-6 mb-4">
+                        <h4><span>~</span>Is this website free?</h4>
+                        <p>Yup! for sure this websites is absolutely free of cost.
+                        </p>
+                    </div>
+                    <div class="col-sm-6 mb-4">
+                        <h4><span>~</span>Which type of help will this website do for me?</h4>
+                        <p>Just by providing your location ,it can easily trace your exact location 
+                            and will provide you with the NDRF teams services during the Disaster.
+                        </p>
+                    </div>
+                    <div class="col-sm-6 mb-4">
+                        <h4><span>~</span>How can these websites predict Disasters like Earthquake ?</h4>
+                        <p>Its a good questions but sorry to say that till now we are unable 
+                            to detect Earthquakes but we can assure your safety after the 
+                            Earthquake that you will get maximum needed help freom govt. ,local authorities 
+                            & NDRF team. 
+                        </p>
+                    </div>
+                    <div class="col-sm-6 mb-4">
+                        <h4><span>~</span>How can these websites predict Disasters like Earthquake ?</h4>
+                        <p>Its a good questions but sorry to say that till now we are unable 
+                            to detect Earthquakes but we can assure your safety after the 
+                            Earthquake that you will get maximum needed help freom govt. ,local authorities 
+                            & NDRF team. 
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-md-12 mt-lg-0 mt-4">
+                        <button class="main-btn" style="justify-content: center; margin-left: 610px;">Learn
+                            more</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- section-9 footer-->
+    <footer id="footer">
+        <div class="footer py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <a class="footer-link" href="#">Refrence used :- </a>
+                        <a class="footer-link" href="https://ndma.gov.in/" target="_blank">NDMA Team</a>
+                        <a class="footer-link" href="https://ndrf.gov.in/news-clippings" target="_blank">NDRF Team</a>
+                        <a class="footer-link" href="https://bmtpc.org" target="_blank">BMTPC Team</a>
+                        <a class="footer-link" href="https://ffs.india-water.gov.in" target="_blank">Flood Forecast Team</a>
+                        <a class="footer-link" href="https://tsunami.incois.gov.in/TEWS/" target="_blank">ESSO Team</a>
+                        <a class="footer-link" href="https://seismo.gov.in/" target="_blank">Seismo Team</a>
+                        <div class="footer-social pt-4 text-center">
+                            <h3>Follow us on :-</h3>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="footer-copy">
+                            <div class="copy-right text-center pt-5">
+                                <p class="text-light">© 2022. Disaster Alert!!. All rights reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- JS Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"></script>
+    <!-- own js -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
